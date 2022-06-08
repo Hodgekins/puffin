@@ -1,0 +1,17 @@
+name: Puffin
+type: theme
+description: 'The Puffin theme'
+package: Other
+core: 8.x
+core_version_requirement: ^8 || ^9
+
+libraries:
+  - puffin/global-styling
+  - puffin/global-scripts
+
+base theme: stable9
+
+regions:
+  header: Header
+  content: Content
+  footer: Footer

@@ -1,0 +1,19 @@
+{
+  "name": "puffin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "sass scss:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Hodgekins@bitbucket.org/lazyfish-digital/puffin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/lazyfish-digital/puffin#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}
