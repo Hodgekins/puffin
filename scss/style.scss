@@ -5,3 +5,13 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 //Custom styles
+
+//Core irritatingly uses .placeholder which conflicts with B5.1
+em.placeholder {
+  display: unset;
+  min-height: unset;
+  vertical-align: unset;
+  cursor: unset;
+  background-color: unset;
+  opacity: unset;
+}

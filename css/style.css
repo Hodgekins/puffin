@@ -10103,5 +10103,13 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+em.placeholder {
+  display: unset;
+  min-height: unset;
+  vertical-align: unset;
+  cursor: unset;
+  background-color: unset;
+  opacity: unset;
+}
 
 /*# sourceMappingURL=style.css.map */
