@@ -54,9 +54,10 @@
     title_display not in ['after', 'before'] ? 'form-no-label',
     disabled == 'disabled' ? 'form-disabled',
     errors ? 'form-item--error',
-    'my-4',
+    type != 'radio' and type != 'checkbox' ? 'my-4',
   ]
 %}
+
 {%
   set description_classes = [
     'description',
