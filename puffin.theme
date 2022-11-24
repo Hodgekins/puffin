@@ -6,140 +6,52 @@
  */
 
 /**
- * Implements hook_preprocess_HOOK() for html.html.twig.
+ * Implements hook_preprocess_image_style()
  */
-function puffin_preprocess_html(array &$variables) {
-  /* Add class to html tag */
-  //$variables['html_attributes']->addClass('no-js');
+function puffin_preprocess_image(&$variables) {
 
-  // Don't display the site name twice on the front page (and potentially others)
-  /*if (isset($variables['head_title_array']['title']) && isset($variables['head_title_array']['name']) && ($variables['head_title_array']['title'] == $variables['head_title_array']['name'])) {
-    $variables['head_title'] = $variables['head_title_array']['name'];
-  }*/
+  //Add Bootstrap classes to images
+  $variables['attributes']['class'][] = 'w-100';
+  $variables['attributes']['class'][] = 'h-auto';
+
+  //Add lazy loading to all images
+  $variables['attributes']['loading'] = 'lazy';
+
+  //Add width & height attributes (depends on style_name core patch (07/22))
+  if (isset($variables['responsive_image_style_id'])) {
+
+    if (strpos($variables['responsive_image_style_id'],'5x4') !== FALSE) {
+      $variables['attributes']['width'] = '500';
+      $variables['attributes']['height'] = '400';
+    }
+    if (strpos($variables['responsive_image_style_id'],'16x9') !== FALSE) {
+      $variables['attributes']['width'] = '1600';
+      $variables['attributes']['height'] = '900';
+    }
+    if (strpos($variables['responsive_image_style_id'],'2x3') !== FALSE) {
+      $variables['attributes']['width'] = '200';
+      $variables['attributes']['height'] = '300';
+    }    
+    if (strpos($variables['responsive_image_style_id'],'3x1') !== FALSE) {
+      $variables['attributes']['width'] = '300';
+      $variables['attributes']['height'] = '100';
+    }      
+    if ($variables['responsive_image_style_id'] == 'hero') {
+      $variables['attributes']['width'] = '500';
+      $variables['attributes']['height'] = '400';
+      $variables['attributes']['class'][] = 'heroImage';
+      unset($variables['attributes']['loading']);
+    }
+  }
 }
 
-/**
- * Implements hook_page_attachments_alter().
- */
-function puffin_page_attachments_alter(array &$page) {
-  // Tell IE to use latest rendering engine (not to use compatibility mode).
-  /*$ie_edge = [
-    '#type' => 'html_tag',
-    '#tag' => 'meta',
-    '#attributes' => [
-    'http-equiv' => 'X-UA-Compatible',
-    'content' => 'IE=edge',
-    ],
-  ];
-  $page['#attached']['html_head'][] = [$ie_edge, 'ie_edge'];*/
-}
+function puffin_preprocess_field__media__videos(&$variables) {
 
-/**
- * Implements hook_preprocess_page() for page.html.twig.
- */
-function puffin_preprocess_page(array &$variables) {
+  //Extract Youtube video id from media object
+  $url = urldecode($variables["items"][0]["content"]["#attributes"]["src"]);
 
-}
+  preg_match('/\b[A-Za-z0-9_-]{11}\b/', $url, $video_id);
 
-/**
- * Implements hook_theme_suggestions_page_alter().
- */
-function puffin_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  $variables['video_id'] = $video_id[0];
 
-}
-
-/**
- * Implements hook_theme_suggestions_node_alter().
- */
-function puffin_theme_suggestions_node_alter(array &$suggestions, array $variables) {
-  /*$node = $variables['elements']['#node'];
-
-  if ($variables['elements']['#view_mode'] == "full") {
-
-  }*/
-}
-
-/**
- * Implements hook_preprocess_HOOK() for Block document templates.
- */
-function puffin_preprocess_block(array &$variables) {
-
-}
-
-/**
- * Implements hook_theme_suggestions_field_alter().
- */
-function puffin_theme_suggestions_field_alter(array &$suggestions, array $variables) {
-  /*$element = $variables['element'];
-  $suggestions[] = 'field__' . $element['#view_mode'];
-  $suggestions[] = 'field__' . $element['#view_mode'] . '__' . $element['#field_name'];*/
-}
-
-/**
- * Implements hook_theme_suggestions_field_alter().
- */
-function puffin_theme_suggestions_fieldset_alter(array &$suggestions, array $variables) {
-  /*$element = $variables['element'];
-  if (isset($element['#attributes']['class']) && in_array('form-composite', $element['#attributes']['class'])) {
-    $suggestions[] = 'fieldset__form_composite';
-  }*/
-}
-
-/**
- * Implements hook_preprocess_node().
- */
-function puffin_preprocess_node(array &$variables) {
-  // Default to turning off byline/submitted.
-  //$variables['display_submitted'] = FALSE;
-}
-
-/**
- * Implements hook_theme_suggestions_views_view_alter().
- */
-function puffin_theme_suggestions_views_view_alter(array &$suggestions, array $variables) {
-
-}
-
-/**
- * Implements hook_preprocess_form().
- */
-function puffin_preprocess_form(array &$variables) {
-  //$variables['attributes']['novalidate'] = 'novalidate';
-}
-
-/**
- * Implements hook_preprocess_select().
- */
-function puffin_preprocess_select(array &$variables) {
-  //$variables['attributes']['class'][] = 'select-chosen';
-}
-
-/**
- * Implements hook_preprocess_field().
- */
-function puffin_preprocess_field(array &$variables, $hook) {
-  /*switch ($variables['element']['#field_name']) {
-  }*/
-}
-
-/**
- * Implements hook_preprocess_details().
- */
-function puffin_preprocess_details(array &$variables) {
-  /*$variables['attributes']['class'][] = 'details';
-  $variables['summary_attributes']['class'] = 'summary';*/
-}
-
-/**
- * Implements hook_theme_suggestions_details_alter().
- */
-function puffin_theme_suggestions_details_alter(array &$suggestions, array $variables) {
-
-}
-
-/**
- * Implements hook_preprocess_menu_local_task().
- */
-function puffin_preprocess_menu_local_task(array &$variables) {
-  //$variables['element']['#link']['url']->setOption('attributes', ['class'=>'rounded']);
 }
