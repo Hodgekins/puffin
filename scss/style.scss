@@ -4,8 +4,6 @@
 //Bootstrap main
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-//Custom styles
-
 //Core irritatingly uses .placeholder which conflicts with B5.1
 em.placeholder {
   display: unset;
@@ -15,3 +13,5 @@ em.placeholder {
   background-color: unset;
   opacity: unset;
 }
+
+//Custom styles

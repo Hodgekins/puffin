@@ -14,9 +14,7 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/lazyfish-digital/puffin#readme",
   "dependencies": {
-    "bootstrap": "^5.1.3",
-    "gsap": "^3.11.0",
-    "lite-youtube-embed": "^0.2.0",
+    "bootstrap": "^5.2.3",
     "sass": "^1.54.0"
   }
 }
