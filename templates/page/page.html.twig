@@ -1,13 +1,19 @@
-<header class="bg-light">
-  {{ page.header }}
+<header class="container-fluid bg-light py-4">
+  <div class="container">
+    <p class="h1">Puffin</p>
+    {{ page.header }}
+  </div>
 </header>
 
-<main>
+<main class="py-4">
   <span id="main-content" tabindex="-1"></span>{# link is in html.html.twig #}
   {{ page.content }}
 </main>
 
-<footer class="bg-dark">
-  {{ page.footer }}
+<footer class="container-fluid text-light bg-dark py-4">
+  <div class="container">
+    <p>Website designed by <a class="text-decoration-none text-light" href="https://lazyfish.co.uk" target="_blank">Lazyfish Digital</a></p>
+    {{ page.footer }}
+  </div>
 </footer>
 
