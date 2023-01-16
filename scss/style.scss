@@ -19,10 +19,17 @@ footer {
   box-shadow: 0 100vh 0 100vh $dark;
 }
 
-//Make puffin more plesane in admin theme:
-//style.css gets loaded into the admin by puffin_layouts and ckeditor5
-.dropbutton {
-  padding: 0;
+//Make puffin look nicer in admin theme:
+.path-admin {
+
+  //This is for the little cog icons in the form-display pages.
+  .field-plugin-settings-edit {
+    padding: 0;
+  }
+
+  .dropbutton {
+    padding: 0;
+  }
 }
 
 //Custom styles

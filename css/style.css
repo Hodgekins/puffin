@@ -10782,7 +10782,10 @@ footer {
   box-shadow: 0 100vh 0 100vh #212529;
 }
 
-.dropbutton {
+.path-admin .field-plugin-settings-edit {
+  padding: 0;
+}
+.path-admin .dropbutton {
   padding: 0;
 }
 
