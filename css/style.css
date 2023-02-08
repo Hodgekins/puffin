@@ -10789,4 +10789,8 @@ footer {
   padding: 0;
 }
 
+details#layout-paragraphs-layout-options {
+  display: none;
+}
+
 /*# sourceMappingURL=style.css.map */

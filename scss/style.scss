@@ -32,4 +32,9 @@ footer {
   }
 }
 
+//Get rid of the rubbish layout options panel
+details#layout-paragraphs-layout-options {
+  display: none;
+}
+
 //Custom styles
