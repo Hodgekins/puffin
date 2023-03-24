@@ -10793,4 +10793,8 @@ details#layout-paragraphs-layout-options {
   display: none;
 }
 
+.form-select {
+  width: auto;
+}
+
 /*# sourceMappingURL=style.css.map */

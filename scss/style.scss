@@ -37,4 +37,10 @@ details#layout-paragraphs-layout-options {
   display: none;
 }
 
+
+//Stop form-select from being full width
+.form-select {
+  width: auto;
+}
+
 //Custom styles
