@@ -37,10 +37,7 @@ details#layout-paragraphs-layout-options {
   display: none;
 }
 
-
 //Stop form-select from being full width
-.form-select {
-  width: auto;
+.form-select, form-control {
+  width: min(90%, 60ex);
 }
-
-//Custom styles

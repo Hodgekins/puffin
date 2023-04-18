@@ -10793,8 +10793,8 @@ details#layout-paragraphs-layout-options {
   display: none;
 }
 
-.form-select {
-  width: auto;
+.form-select, form-control {
+  width: min(90%, 60ex);
 }
 
 /*# sourceMappingURL=style.css.map */
