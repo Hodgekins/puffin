@@ -10794,7 +10794,7 @@ details#layout-paragraphs-layout-options {
 }
 
 .form-select, form-control {
-  width: min(90%, 60ex);
+  width: min(100%, 60ex);
 }
 
 /*# sourceMappingURL=style.css.map */
