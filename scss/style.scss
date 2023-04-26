@@ -128,3 +128,8 @@ em.placeholder {
   position: absolute;
   left: 80%;
 }
+
+/* Make images all same size regardless of title size */
+.js-media-library-views-form .views-row {
+  width: 220px;
+}
