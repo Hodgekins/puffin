@@ -1,9 +1,3 @@
-//Custom variables
-@import "./variables";
-
-//Bootstrap main
-@import "../node_modules/bootstrap/scss/bootstrap";
-
 //Core irritatingly uses .placeholder which conflicts with B5.1
 em.placeholder {
   display: unset;
@@ -14,30 +8,123 @@ em.placeholder {
   opacity: unset;
 }
 
-//Make footer strecth to bootom of page
-footer {
-  box-shadow: 0 100vh 0 100vh $dark;
-}
+/**
+ * ADMIN improvements
+ */
 
-//Make puffin look nicer in admin theme:
+//This is for the little cog icons in the form-display pages.
 .path-admin {
-
-  //This is for the little cog icons in the form-display pages.
   .field-plugin-settings-edit {
     padding: 0;
   }
-
   .dropbutton {
     padding: 0;
   }
 }
 
 //Get rid of the rubbish layout options panel
-details#layout-paragraphs-layout-options {
+ #layout-paragraphs-layout-options {
   display: none;
 }
 
 //Stop form-select from being full width
 .form-select, form-control {
   width: min(100%, 60ex);
+}
+
+/**
+ * GIN specific admin improvements
+ */
+
+//Fix the weird thing on add media vertical tabs
+.vertical-tabs__menu-item::before, .vertical-tabs__menu-item::after {
+  position: relative;
+}
+
+// Gin uses flex-start which looks crap.
+.form--inline .form-item, .form--inline .form-actions, [data-drupal-selector*=-bulk-form] .form-item, [data-drupal-selector*=-bulk-form] .form-actions, .layout-region-node-footer__content .form-item, .layout-region-node-footer__content .form-actions {
+  align-self: end !important;
+}
+
+/**
+ * Media and layout paragraph improvements
+ */ 
+/* No more filters */
+.js-filter-wrapper {
+  display: none;
+}
+
+/* Improve Choose a component box */
+
+.lpb-dialog {
+    min-width: min(90%, 500px) !important;
+}
+
+.lpb-component-list-search-input {
+    display: none;
+}
+
+.lpb-component-list__group--content {
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.lpb-component-list__item {
+    height: 60px;
+    border: 1px solid #dedfe4;
+    border-radius: 2px;
+    display: flex;
+}
+.lpb-component-list__item a {
+    text-decoration: none;
+    margin: 0;
+    padding: 0 0 0 8px;
+}
+
+.lpb-component-list__item img {
+    height: 100%;
+    width: auto;
+    padding: 8px 8px 8px 0;
+    margin: 0;
+    max-width: none;
+}
+
+/* remove padding from admin view */
+.lpb-layout {
+  padding: 0;
+}
+
+.lp-builder {
+  border: 1px dashed blue;
+}
+
+/* Improve media library */
+.media-library-widget-modal .ui-dialog-buttonpane {
+  display: block;
+}
+
+/* Remove stupid message */
+#field_image-media-library-wrapper--description {
+  display: none;
+}
+
+/* Remove upload form - it doesn't look good in the front end at the moment */
+#media-library-add-form-wrapper {
+  display: none;
+}
+
+/* Bit of space for the media preview */
+.js-media-library-item-preview {
+ margin: 0.7rem 0;
+}
+
+/* Get rid of rubbish AJAX throbber */
+.ajax-progress {
+  display: none !important;
+}
+
+/* Improve position of sticky out checkbox in media library */
+.views-field-media-library-select-form {
+  position: absolute;
+  left: 80%;
 }

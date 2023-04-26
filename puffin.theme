@@ -11,8 +11,10 @@
 function puffin_preprocess_image(&$variables) {
 
   //Add Bootstrap classes to images
-  $variables['attributes']['class'][] = 'w-100';
-  $variables['attributes']['class'][] = 'h-auto';
+  if ($variables['style_name'] != 'media_library' && $variables['style_name'] != 'thumbnail') {
+    $variables['attributes']['class'][] = 'w-100';
+    $variables['attributes']['class'][] = 'h-auto';
+  }
 
   //Add lazy loading to all images
   $variables['attributes']['loading'] = 'lazy';
@@ -31,11 +33,11 @@ function puffin_preprocess_image(&$variables) {
     if (strpos($variables['responsive_image_style_id'],'2x3') !== FALSE) {
       $variables['attributes']['width'] = '200';
       $variables['attributes']['height'] = '300';
-    }    
+    }
     if (strpos($variables['responsive_image_style_id'],'3x1') !== FALSE) {
       $variables['attributes']['width'] = '300';
       $variables['attributes']['height'] = '100';
-    }      
+    }
     if ($variables['responsive_image_style_id'] == 'hero') {
       $variables['attributes']['width'] = '500';
       $variables['attributes']['height'] = '400';
