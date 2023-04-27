@@ -133,3 +133,8 @@ em.placeholder {
 .js-media-library-views-form .views-row {
   width: 220px;
 }
+
+/* Currently duplicate paragraph throws an AJAX error. Keep checking this */
+.lpb-duplicate {
+  display: none;
+}

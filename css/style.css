@@ -124,4 +124,9 @@ em.placeholder {
   width: 220px;
 }
 
+/* Currently duplicate paragraph throws an AJAX error. Keep checking this */
+.lpb-duplicate {
+  display: none;
+}
+
 /*# sourceMappingURL=style.css.map */
