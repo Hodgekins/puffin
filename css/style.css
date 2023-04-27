@@ -110,7 +110,9 @@ em.placeholder {
 
 /* Get rid of rubbish AJAX throbber */
 .ajax-progress {
-  display: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  background: none !important;
 }
 
 /* Improve position of sticky out checkbox in media library */
