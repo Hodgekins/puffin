@@ -12,10 +12,14 @@
  */
 #}
 {% if primary %}
-  <h2 class="visually-hidden">{{ 'Primary tabs'|t }}</h2>
-  <ul class="nav nav-tabs my-2">{{ primary }}</ul>
+  <div class="container">
+    <h2 class="visually-hidden">{{ 'Primary tabs'|t }}</h2>
+    <ul class="nav nav-tabs my-2">{{ primary }}</ul>
+  </div>
 {% endif %}
 {% if secondary %}
-  <h2 class="visually-hidden">{{ 'Secondary tabs'|t }}</h2>
-  <ul>{{ secondary }}</ul>
+  <div class="container">
+    <h2 class="visually-hidden">{{ 'Secondary tabs'|t }}</h2>
+    <ul>{{ secondary }}</ul>
+  </div>
 {% endif %}
