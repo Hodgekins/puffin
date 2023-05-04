@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
+$font-family-sans-serif:  'Roboto', sans-serif;
+
+$primary: #1C6CB4;
+$secondary: #7FB942;
+$accent: #DF2935;
+$success: #7FB942;
+$info: #FBAF00;
+$warning: #FF5714;
+$danger: #DF2935;
+$light: #E6E8E6;
+$dark: #080708;
+
+$border-color: $dark;
+
+$headings-color: $primary;
+
+$spacer: 1.4rem;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "accent":     $accent,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
