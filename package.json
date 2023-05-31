@@ -14,7 +14,7 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/lazyfish-digital/puffin#readme",
   "dependencies": {
-    "bootstrap": "^5.2.3",
+    "bootstrap": "^5.3",
     "sass": "^1.54.0"
   }
 }
