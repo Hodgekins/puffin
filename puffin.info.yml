@@ -2,7 +2,6 @@ name: Puffin
 type: theme
 description: 'The Puffin theme'
 package: Other
-core: 8.x
 core_version_requirement: ^9 || ^10
 
 libraries:
