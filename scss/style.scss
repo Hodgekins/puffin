@@ -1,8 +1,18 @@
 @import "./variables";
-@import "./admin";
+// @import "./admin";
 
 //Bootstrap main
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+//Core irritatingly uses .placeholder which conflicts with B5.1
+em.placeholder {
+  display: unset;
+  min-height: unset;
+  vertical-align: unset;
+  cursor: unset;
+  background-color: unset;
+  opacity: unset;
+}
 
 footer {
   box-shadow: 0 100vh 0 100vh $dark;

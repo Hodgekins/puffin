@@ -1,7 +1,7 @@
 name: Puffin
 type: theme
 description: 'The Puffin theme'
-package: Other
+package: Puffin
 core_version_requirement: ^9 || ^10
 
 libraries:
