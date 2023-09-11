@@ -1,5 +1,36 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
+/**
+ * ADMIN improvements
+ */
+.form-select, form-control, .form-autocomplete {
+  width: min(100%, 60ex) !important;
+}
+
+.dropbutton {
+  padding-left: 0;
+}
+
+.form-text {
+  margin-top: 0 !important;
+}
+
+/**
+ * Media and layout paragraph improvements
+ */
+/* Improve media library */
+/* Remove stupid message */
+/* Bit of space for the media preview */
+/* Get rid of rubbish AJAX throbber */
+/* Improve position of sticky out checkbox in media library */
+/* Make images all same size regardless of title size */
+/**
+ * GIN specific admin improvements
+ */
+.vertical-tabs__menu-item::before, .vertical-tabs__menu-item::after {
+  position: relative;
+}
+
 /*!
  * Bootstrap  v5.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors

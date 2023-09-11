@@ -2,107 +2,108 @@
  * ADMIN improvements
  */
 
-//Get rid of the rubbish layout options panel
- #layout-paragraphs-layout-options {
-  display: none;
-}
+////Get rid of the rubbish layout options panel
+// #layout-paragraphs-layout-options {
+//  display: none;
+//}
 
 //Stop form-select from being full width
-.form-select, form-control {
-  width: min(100%, 60ex);
+.form-select, form-control, .form-autocomplete {
+  width: min(100%, 60ex) !important;
+}
+
+//Fix dropbuttons
+.dropbutton {
+  padding-left: 0;
+}
+
+//Straighten out forms
+.form-text {
+  margin-top: 0 !important;
 }
 
 /**
  * Media and layout paragraph improvements
  */ 
 
-/* No more filters */
-.js-filter-wrapper {
-  display: none;
-}
 
-/* Improve Choose a component box */
-
-.lpb-dialog {
-    min-width: min(90%, 500px) !important;
-}
-
-.lpb-component-list-search-input {
-    display: none;
-}
-
-.lpb-component-list__group--content {
-    gap: 10px;
-    margin: 20px 0;
-}
-
-.lpb-component-list__item {
-    height: 60px;
-    border: 1px solid #dedfe4;
-    border-radius: 2px;
-    display: flex;
-}
-.lpb-component-list__item a {
-    text-decoration: none;
-    margin: 0;
-    padding: 0 0 0 8px;
-}
-
-.lpb-component-list__item img {
-    height: 100%;
-    width: auto;
-    padding: 8px 8px 8px 0;
-    margin: 0;
-    max-width: none;
-}
-
-/* remove padding from admin view */
-.lpb-layout {
-  padding: 0;
-}
-
-.lp-builder {
-  border: 1px dashed blue;
-}
+///* Improve Choose a component box */
+//
+//.lpb-dialog {
+//    min-width: min(90%, 500px) !important;
+//}
+//
+//.lpb-component-list-search-input {
+//    display: none;
+//}
+//
+//.lpb-component-list__group--content {
+//    gap: 10px;
+//    margin: 20px 0;
+//}
+//
+//.lpb-component-list__item {
+//    height: 60px;
+//    border: 1px solid #dedfe4;
+//    border-radius: 2px;
+//    display: flex;
+//}
+//.lpb-component-list__item a {
+//    text-decoration: none;
+//    margin: 0;
+//    padding: 0 0 0 8px;
+//}
+//
+//.lpb-component-list__item img {
+//    height: 100%;
+//    width: auto;
+//    padding: 8px 8px 8px 0;
+//    margin: 0;
+//    max-width: none;
+//}
+//
+///* remove padding from admin view */
+//.lpb-layout {
+//  padding: 0;
+//}
+//
+//.lp-builder {
+//  border: 1px dashed blue;
+//}
 
 /* Improve media library */
-.media-library-widget-modal .ui-dialog-buttonpane {
-  display: block;
-}
+//.media-library-widget-modal .ui-dialog-buttonpane {
+//  display: block;
+//}
 
 /* Remove stupid message */
-#field_image-media-library-wrapper--description {
-  display: none;
-}
-
-/* Remove upload form - it doesn't look good in the front end at the moment */
-#media-library-add-form-wrapper {
-  display: none;
-}
+//#field_image-media-library-wrapper--description {
+//  display: none;
+//}
 
 /* Bit of space for the media preview */
-.js-media-library-item-preview {
- margin: 0.7rem 0;
-}
+//.js-media-library-item-preview {
+// margin: 0.7rem 0;
+//}
 
 /* Get rid of rubbish AJAX throbber */
-.ajax-progress {
-  //display: none !important;
-  box-shadow: none !important;
-  border: none !important;
-  background: none !important;
-}
+//.ajax-progress {
+//  //display: none !important;
+//  box-shadow: none !important;
+//  border: none !important;
+//  background: none !important;
+//}
 
 /* Improve position of sticky out checkbox in media library */
-.views-field-media-library-select-form {
-  position: absolute;
-  left: 80%;
-}
+//.views-field-media-library-select-form {
+//  position: absolute;
+//  left: 80%;
+//}
 
 /* Make images all same size regardless of title size */
-.js-media-library-views-form .views-row {
-  width: 220px;
-}
+//.js-media-library-views-form .views-row {
+//  width: 220px;
+//}
 
 /**
  * GIN specific admin improvements
@@ -114,8 +115,8 @@
 }
 
 // Gin uses flex-start which looks crap.
-.form--inline .form-item, .form--inline .form-actions, [data-drupal-selector*=-bulk-form] .form-item, [data-drupal-selector*=-bulk-form] .form-actions, .layout-region-node-footer__content .form-item, .layout-region-node-footer__content .form-actions {
-  align-self: end !important;
-}
+//.form--inline .form-item, .form--inline .form-actions, [data-drupal-selector*=-bulk-form] .form-item, [data-drupal-selector*=-bulk-form] .form-actions, .layout-region-node-footer__content .form-item, .layout-region-node-footer__content .form-actions {
+  //align-self: end !important;
+//}
 
 
