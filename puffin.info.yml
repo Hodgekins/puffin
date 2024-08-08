@@ -2,7 +2,7 @@ name: Puffin
 type: theme
 description: 'The Puffin theme'
 package: Puffin
-core_version_requirement: ^9 || ^10
+core_version_requirement: ^10 || ^11
 
 libraries:
   - puffin/global-styling
