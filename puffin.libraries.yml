@@ -3,6 +3,7 @@ global-styling:
   css:
     theme:
       css/style.css: {}
+      css/layout-builder.css: {}
 global-scripts:
   version: 1.x
   js:
